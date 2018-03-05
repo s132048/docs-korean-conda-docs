@@ -23,7 +23,32 @@
 .. toctree::
    :maxdepth: 2
 
-   commands_ko/*
+   commands_ko/conda-clean.rst
+   commands_ko/conda-clean_ko.rst
+   commands_ko/conda-config.rst
+   commands_ko/conda-config_ko.rst
+   commands_ko/conda-create.rst
+   commands_ko/conda-create_ko.rst
+   commands_ko/conda-help.rst
+   commands_ko/conda-help_ko.rst
+   commands_ko/conda-info.rst
+   commands_ko/conda-info_ko.rst
+   commands_ko/conda-install.rst
+   commands_ko/conda-install_ko.rst
+   commands_ko/conda-list.rst
+   commands_ko/conda-list_ko.rst
+   commands_ko/conda-package.rst
+   commands_ko/conda-package_ko.rst
+   commands_ko/conda-remove.rst
+   commands_ko/conda-remove_ko.rst
+   commands_ko/conda-search.rst
+   commands_ko/conda-search_ko.rst
+   commands_ko/conda-uninstall.rst
+   commands_ko/conda-uninstall_ko.rst
+   commands_ko/conda-update.rst
+   commands_ko/conda-update_ko.rst
+   commands_ko/conda-upgrade.rst
+   commands_ko/conda-upgrade_ko.rst
 
 
 콘다 빌드 명령
@@ -33,10 +58,25 @@
 콘다 빌드는 ``conda install conda-build``\ 로 설치할 수 있다.
 
 .. toctree::
-   :glob:
    :maxdepth: 2
 
-   commands_ko/build/*
+   commands_ko/build/conda-build.rst
+   commands_ko/build/conda-convert.rst
+   commands_ko/build/conda-develop.rst
+   commands_ko/build/conda-index.rst
+   commands_ko/build/conda-inspect-channels.rst
+   commands_ko/build/conda-inspect-linkages.rst
+   commands_ko/build/conda-inspect-objects.rst
+   commands_ko/build/conda-inspect.rst
+   commands_ko/build/conda-metapackage.rst
+   commands_ko/build/conda-render.rst
+   commands_ko/build/conda-skeleton-cpan.rst
+   commands_ko/build/conda-skeleton-cran.rst
+   commands_ko/build/conda-skeleton-luarocks.rst
+   commands_ko/build/conda-skeleton-pypi.rst
+   commands_ko/build/conda-skeleton.rst
+
+
 
 콘다 환경 명령
 ==========================
@@ -44,10 +84,16 @@
 다음 명령들이 콘다와 함께 자동 설치되는 콘다 환경(conda-env) 패키지를 구성한다.
 
 .. toctree::
-   :glob:
    :maxdepth: 2
 
-   commands_ko/env/*
+   commands_ko/env/conda-env-attach.rst
+   commands_ko/env/conda-env-create.rst
+   commands_ko/env/conda-env-export.rst
+   commands_ko/env/conda-env-list.rst
+   commands_ko/env/conda-env-remove.rst
+   commands_ko/env/conda-env-update.rst
+   commands_ko/env/conda-env-upload.rst
+   commands_ko/env/conda-env.rst
 
 Conda / pip / virtualenv 명령 비교
 =====================================
