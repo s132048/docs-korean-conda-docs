@@ -23,19 +23,7 @@
 .. toctree::
    :maxdepth: 2
 
-   commands_ko/conda-clean_ko.rst
-   commands_ko/conda-config_ko.rst
-   commands_ko/conda-create_ko.rst
-   commands_ko/conda-help_ko.rst
-   commands_ko/conda-info_ko.rst
-   commands_ko/conda-install_ko.rst
-   commands_ko/conda-list_ko.rst
-   commands_ko/conda-package_ko.rst
-   commands_ko/conda-remove_ko.rst
-   commands_ko/conda-search_ko.rst
-   commands_ko/conda-uninstall_ko.rst
-   commands_ko/conda-update_ko.rst
-   commands_ko/conda-upgrade_ko.rst
+   commands_ko/*
 
 
 콘다 빌드 명령
@@ -48,7 +36,7 @@
    :glob:
    :maxdepth: 2
 
-   commands/build/*
+   commands_ko/build/*
 
 콘다 환경 명령
 ==========================
@@ -59,7 +47,7 @@
    :glob:
    :maxdepth: 2
 
-   commands/env/*
+   commands_ko/env/*
 
 Conda / pip / virtualenv 명령 비교
 =====================================
