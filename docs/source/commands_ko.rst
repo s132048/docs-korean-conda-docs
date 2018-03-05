@@ -23,31 +23,18 @@
 .. toctree::
    :maxdepth: 2
 
-   commands_ko/conda-clean.rst
    commands_ko/conda-clean_ko.rst
-   commands_ko/conda-config.rst
    commands_ko/conda-config_ko.rst
-   commands_ko/conda-create.rst
    commands_ko/conda-create_ko.rst
-   commands_ko/conda-help.rst
    commands_ko/conda-help_ko.rst
-   commands_ko/conda-info.rst
    commands_ko/conda-info_ko.rst
-   commands_ko/conda-install.rst
    commands_ko/conda-install_ko.rst
-   commands_ko/conda-list.rst
    commands_ko/conda-list_ko.rst
-   commands_ko/conda-package.rst
    commands_ko/conda-package_ko.rst
-   commands_ko/conda-remove.rst
    commands_ko/conda-remove_ko.rst
-   commands_ko/conda-search.rst
    commands_ko/conda-search_ko.rst
-   commands_ko/conda-uninstall.rst
    commands_ko/conda-uninstall_ko.rst
-   commands_ko/conda-update.rst
    commands_ko/conda-update_ko.rst
-   commands_ko/conda-upgrade.rst
    commands_ko/conda-upgrade_ko.rst
 
 
@@ -60,21 +47,21 @@
 .. toctree::
    :maxdepth: 2
 
-   commands_ko/build/conda-build.rst
-   commands_ko/build/conda-convert.rst
-   commands_ko/build/conda-develop.rst
-   commands_ko/build/conda-index.rst
-   commands_ko/build/conda-inspect-channels.rst
-   commands_ko/build/conda-inspect-linkages.rst
-   commands_ko/build/conda-inspect-objects.rst
-   commands_ko/build/conda-inspect.rst
-   commands_ko/build/conda-metapackage.rst
-   commands_ko/build/conda-render.rst
-   commands_ko/build/conda-skeleton-cpan.rst
-   commands_ko/build/conda-skeleton-cran.rst
-   commands_ko/build/conda-skeleton-luarocks.rst
-   commands_ko/build/conda-skeleton-pypi.rst
-   commands_ko/build/conda-skeleton.rst
+   commands_ko/build/conda-build_ko.rst
+   commands_ko/build/conda-convert_ko.rst
+   commands_ko/build/conda-develop_ko.rst
+   commands_ko/build/conda-index_ko.rst
+   commands_ko/build/conda-inspect-channels_ko.rst
+   commands_ko/build/conda-inspect-linkages_ko.rst
+   commands_ko/build/conda-inspect-objects_ko.rst
+   commands_ko/build/conda-inspect_ko.rst
+   commands_ko/build/conda-metapackage_ko.rst
+   commands_ko/build/conda-render_ko.rst
+   commands_ko/build/conda-skeleton-cpan_ko.rst
+   commands_ko/build/conda-skeleton-cran_ko.rst
+   commands_ko/build/conda-skeleton-luarocks_ko.rst
+   commands_ko/build/conda-skeleton-pypi_ko.rst
+   commands_ko/build/conda-skeleton_ko.rst
 
 
 
@@ -86,14 +73,14 @@
 .. toctree::
    :maxdepth: 2
 
-   commands_ko/env/conda-env-attach.rst
-   commands_ko/env/conda-env-create.rst
-   commands_ko/env/conda-env-export.rst
-   commands_ko/env/conda-env-list.rst
-   commands_ko/env/conda-env-remove.rst
-   commands_ko/env/conda-env-update.rst
-   commands_ko/env/conda-env-upload.rst
-   commands_ko/env/conda-env.rst
+   commands_ko/env/conda-env-attach_ko.rst
+   commands_ko/env/conda-env-create_ko.rst
+   commands_ko/env/conda-env-export_ko.rst
+   commands_ko/env/conda-env-list_ko.rst
+   commands_ko/env/conda-env-remove_ko.rst
+   commands_ko/env/conda-env-update_ko.rst
+   commands_ko/env/conda-env-upload_ko.rst
+   commands_ko/env/conda-env_ko.rst
 
 Conda / pip / virtualenv 명령 비교
 =====================================
