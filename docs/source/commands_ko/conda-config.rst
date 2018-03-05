@@ -23,9 +23,11 @@ conda config
           usage: conda config [-h] [--json] [--debug] [--verbose]
    
           [--system | <B>--env</B> | <B>--file</B> FILE]
-                 (<B>--show</B>  | <B>--show-sources</B> | <B>--validate</B> | <B>--describe</B> | <B>--get</B> [KEY
-                 [KEY ...]] | <B>--append</B> KEY VALUE | <B>--prepend</B> KEY  VALUE  |  <B>--set</B>
-                 KEY VALUE | <B>--remove</B> KEY VALUE | <B>--remove-key</B> KEY)
+                 (<B>--show</B>  [SHOW  [SHOW  ...]]  |  <B>--show-sources</B>  |  <B>--validate</B> |
+                 <B>--describe</B> [DESCRIBE [DESCRIBE ...]] | <B>--write-default</B>  |  <B>--get</B>
+                 [KEY  [KEY  ...]]  |  <B>--append</B> KEY VALUE | <B>--prepend</B> KEY VALUE |
+                 <B>--set</B> KEY VALUE |  <B>--remove</B>  KEY  VALUE  |  <B>--remove-key</B>  KEY  |
+                 <B>--stdin</B>)
    
           Modify configuration values in .condarc.  This is modeled after the git
           config command.  Writes to the user .condarc file (<I>user</I> <I>.condarc</I>  <I>path</I>)
@@ -48,12 +50,12 @@ conda config
                  Use once for info, twice for debug, three times for trace.
    
           <B>--system</B>
-                 Write to the system .condarc file (<I>system</I> <I>.condarc</I> <I>path</I>). Other-
+                 Write to the system .condarc file (root prefix/.condarc). Other-
                  wise writes to the user config file (<I>user</I> <I>.condarc</I> <I>path</I>).
    
-          <B>--env</B>  Write  to  the active conda environment .condarc file (<I>root</I> <I>pre-</I>
-                 <I>fix/envs/conda-docs</I>). If no environment is active, write to  the
-                 user config file (<I>user</I> <I>.condarc</I> <I>path</I>).
+          <B>--env</B>  Write  to the active conda environment .condarc file (&lt;no active
+                 environment&gt;). If no environment is active, write  to  the  user
+                 config file (<I>user</I> <I>.condarc</I> <I>path</I>).
    
           <B>--file</B> FILE
                  Write  to  the  given  file. Otherwise writes to the user config
@@ -61,7 +63,9 @@ conda config
                  DARC' environment variable, if it is set (default: <I>user</I> <I>.condarc</I>
                  <I>path</I>).
    
-          <B>--show</B> Display all configuration values as calculated and compiled.
+          <B>--show</B> [SHOW [SHOW ...]]
+                 Display configuration values as calculated and compiled.  If  no
+                 arguments  given, show information for all configuration values.
    
           <B>--show-sources</B>
                  Display all identified configuration sources.
@@ -69,8 +73,14 @@ conda config
           <B>--validate</B>
                  Validate all configuration sources.
    
-          <B>--describe</B>
-                 Describe available configuration parameters.
+          <B>--describe</B> [DESCRIBE [DESCRIBE ...]]
+                 Describe given configuration parameters. If no arguments  given,
+                 show information for all configuration parameters.
+   
+          <B>--write-default</B>
+                 Write  the default configuration to a file. Equivalent to `conda
+                 config <B>--describe</B> &gt; ~/.condarc`  when  no  <B>--env</B>,  <B>--system</B>,  or
+                 <B>--file</B> flags are given.
    
           <B>--get</B> [KEY [KEY ...]]
                  Get a configuration value.
@@ -85,41 +95,56 @@ conda config
                  Set a boolean or string key
    
           <B>--remove</B> KEY VALUE
-                 Remove a configuration value from a list key. This  removes  all
+                 Remove  a  configuration value from a list key. This removes all
                  instances of the value.
    
           <B>--remove-key</B> KEY
                  Remove a configuration key (and all its values).
    
-          See  `conda config <B>--describe</B>` or https://conda.io/docs/config.html for
-          details on all the options that can go in .condarc.
+          <B>--stdin</B>
+                 Apply configuration  information  given  in  yaml  format  piped
+                 through stdin.
+   
+                 See  `conda  config  <B>--describe</B>`  or  https://conda.io/docs/con-
+                 fig.html for details on all the options that can go in .condarc.
+   
+                 Examples:
+   
+                 Display all configuration values as calculated and compiled:
+   
+                 conda config <B>--show</B>
+   
+                 Display all identified configuration sources:
+   
+                 conda config <B>--show-sources</B>
+   
+                 Describe all available configuration options:
+   
+                 conda config <B>--describe</B>
+   
+                 Add the conda-canary channel:
+   
+                 conda config <B>--add</B> channels conda-canary
+   
+                 Set the output verbosity to level 3 (highest):
+   
+                 conda config <B>--set</B> verbosity 3
+   
+                 Get the channels defined in the system .condarc:
+   
+                 conda config <B>--get</B> channels <B>--system</B>
+   
+                 Add the 'foo' Binstar channel:
+   
+                 conda config <B>--add</B> channels foo
+   
+                 Disable the 'show_channel_urls' option:
+   
+                 conda config <B>--set</B> show_channel_urls no
+   
+   
    
    
    </PRE>
-   <H2>EXAMPLES</H2><PRE>
-          Display all configuration values as calculated and compiled:
-   
-                 conda config --show
-   
-          Display all identified configuration sources:
-   
-                 conda config --show-sources
-   
-          Describe all available configuration options:
-   
-                 conda config --describe
-   
-          Add the conda-canary channel:
-   
-                 conda config --add channels conda-canary
-   
-          Set the output verbosity to level 3 (highest):
-   
-                 conda config --set verbosity 3
-   
-   
-   
-   
-   </PRE>
-   <H2>Anaconda, Inc.                      1i 2018                           CONDA(1)</H2><PRE>
+   <H2>Anaconda, Inc.                      3i 2018                           CONDA(1)</H2><PRE>
    </PRE>

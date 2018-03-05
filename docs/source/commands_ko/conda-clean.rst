@@ -21,9 +21,9 @@ conda clean
    </PRE>
    <H2>DESCRIPTION</H2><PRE>
           usage: conda clean [-h] [-y] [--dry-run] [--json] [--debug] [--verbose]
-          [-a]
+          [-q]
    
-                 [-i] [-l] [-t] [-p] [-s]
+                 [-a] [-i] [-l] [-t] [-p] [-s]
    
           Remove unused packages and caches.
    
@@ -48,6 +48,9 @@ conda clean
    
           <B>--verbose</B>, <B>-v</B>
                  Use once for info, twice for debug, three times for trace.
+   
+          <B>-q</B>, <B>--quiet</B>
+                 Do not display progress bar.
    
           <B>-a</B>, <B>--all</B>
                  Remove index cache, lock files, tarballs, unused cache packages,
@@ -78,5 +81,5 @@ conda clean
    
    
    </PRE>
-   <H2>Anaconda, Inc.                      1i 2018                           CONDA(1)</H2><PRE>
+   <H2>Anaconda, Inc.                      3i 2018                           CONDA(1)</H2><PRE>
    </PRE>

@@ -1,7 +1,7 @@
 
-.. _help_ref:
+.. _env list_ref:
 
-conda help
+conda env list
 =======================
 
 .. raw:: html
@@ -15,31 +15,33 @@ conda help
    
    </PRE>
    <H2>NAME</H2><PRE>
-          conda - conda help
+          conda - conda env list
    
    
    </PRE>
    <H2>DESCRIPTION</H2><PRE>
-          usage: conda help [-h] [COMMAND]
+          usage: conda-env list [-h] [--json] [--debug] [--verbose]
    
-          Displays a list of available conda commands and their help strings.
+          List the Conda environments
    
    
    </PRE>
    <H2>OPTIONS</H2><PRE>
-      <B>positional</B> <B>arguments:</B>
-          COMMAND
-                 Print  help  information  for  COMMAND  (same  as: conda COMMAND
-                 <B>--help</B>).
-   
       <B>optional</B> <B>arguments:</B>
           <B>-h</B>, <B>--help</B>
                  Show this help message and exit.
    
+          <B>--json</B> Report all output as json. Suitable for using conda programmati-
+                 cally.
    
-   </PRE>
-   <H2>EXAMPLES</H2><PRE>
-                 conda help install
+          <B>--debug</B>
+                 Show debug output.
+   
+          <B>--verbose</B>, <B>-v</B>
+                 Use once for info, twice for debug, three times for trace.
+   
+      <B>examples:</B>
+                 conda env list conda env list <B>--json</B>
    
    
    

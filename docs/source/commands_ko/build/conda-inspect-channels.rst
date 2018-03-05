@@ -1,7 +1,7 @@
 
-.. _help_ref:
+.. _inspect channels_ref:
 
-conda help
+conda inspect channels
 =======================
 
 .. raw:: html
@@ -15,31 +15,34 @@ conda help
    
    </PRE>
    <H2>NAME</H2><PRE>
-          conda - conda help
+          conda - conda inspect channels
    
    
    </PRE>
    <H2>DESCRIPTION</H2><PRE>
-          usage: conda help [-h] [COMMAND]
+          usage:  conda-inspect  channels  [-h]  [--verbose] [--test-installable]
+          [channel]
    
-          Displays a list of available conda commands and their help strings.
+          Tools for investigating conda channels.
    
    
    </PRE>
    <H2>OPTIONS</H2><PRE>
       <B>positional</B> <B>arguments:</B>
-          COMMAND
-                 Print  help  information  for  COMMAND  (same  as: conda COMMAND
-                 <B>--help</B>).
+          channel
+                 The channel to test. The default is defaults.
    
       <B>optional</B> <B>arguments:</B>
           <B>-h</B>, <B>--help</B>
                  Show this help message and exit.
    
+          <B>--verbose</B>
+                 Show verbose output. Note  that  error  output  to  stderr  will
+                 always be shown regardless of this flag.
    
-   </PRE>
-   <H2>EXAMPLES</H2><PRE>
-                 conda help install
+          <B>--test-installable</B>, <B>-t</B>
+                 Test every package in the channel to see if it is installable by
+                 conda.
    
    
    

@@ -23,7 +23,7 @@ conda info
           usage:  conda info [-h] [--json] [--debug] [--verbose] [--offline] [-a]
           [-e]
    
-                 [-l] [-s] [--root] [--unsafe-channels] [packages [packages ...]]
+                 [-l] [-s] [--base] [--unsafe-channels] [packages [packages ...]]
    
           Display information about current conda install.
    
@@ -63,7 +63,7 @@ conda info
           <B>-s</B>, <B>--system</B>
                  List environment variables.
    
-          <B>--root</B> Display root environment path.
+          <B>--base</B> Display base environment path.
    
           <B>--unsafe-channels</B>
                  Display list of channels with tokens exposed.
@@ -77,5 +77,5 @@ conda info
    
    
    </PRE>
-   <H2>Anaconda, Inc.                      1i 2018                           CONDA(1)</H2><PRE>
+   <H2>Anaconda, Inc.                      3i 2018                           CONDA(1)</H2><PRE>
    </PRE>
