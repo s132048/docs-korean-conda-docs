@@ -11,6 +11,7 @@ git rebase docs-korean
 touch .nojekyll
 
 echo '!build/' >> .gitignore
+echo '!env/' >> .gitignore
 
 source activate conda-docs
 
