@@ -23,19 +23,19 @@ conda remove
           usage:  conda  remove  [-h] [-y] [--dry-run] [--json] [--debug] [--ver-
           bose]
    
-          [--all] [--features] [--force] [--no-pin] [-c CHANNEL]
-                 [--override-channels]  [-n   ENVIRONMENT   |   <B>-p</B>   PATH]   [-q]
-                 [--no-use-index-cache]     [--use-index-cache]     [--use-local]
-                 [--offline] [-k] [package_name [package_name ...]]
+          [--all] [--force] [--no-pin] [-c CHANNEL]
+                 [--override-channels] [-n  ENVIRONMENT  |  <B>-p</B>  PATH]  [-q]  [-C]
+                 [--use-local] [--offline] [-k] [--features] [package_name [pack-
+                 age_name ...]]
    
           Remove a list of packages from a specified conda environment.
    
-          This command will also remove any package that depends on  any  of  the
-          specified  packages as well---unless a replacement can be found without
-          that dependency. If you wish  to  skip  this  dependency  checking  and
-          remove just the requested packages, add the '--force' option. Note how-
-          ever that this may result in a broken environment,  so  use  this  with
-          caution.
+                 This command will also remove any package that depends on any of
+                 the  specified  packages  as  well---unless a replacement can be
+                 found without that dependency. If you wish to skip  this  depen-
+                 dency  checking  and remove just the requested packages, add the
+                 '--force' option. Note however that this may result in a  broken
+                 environment, so use this with caution.
    
    
    </PRE>
@@ -65,9 +65,6 @@ conda remove
    
           <B>--all</B>  Remove all packages, i.e., the entire environment.
    
-          <B>--features</B>
-                 Remove features (instead of packages).
-   
           <B>--force</B>
                  Forces removal of  a  package  without  removing  packages  that
                  depend on it. Using this option will usually leave your environ-
@@ -91,21 +88,16 @@ conda remove
                  Do not search default or .condarc channels. Requires  <B>--channel</B>.
    
           <B>-n</B> ENVIRONMENT, <B>--name</B> ENVIRONMENT
-                 Name      of      environment      (in     root     prefix/envs:
-                 /Users/joelkim/.conda/envs).
+                 Name of environment.
    
           <B>-p</B> PATH, <B>--prefix</B> PATH
-                 Full  path   to   environment   prefix   (default:   <I>root</I>   <I>pre-</I>
-                 <I>fix/envs/conda-docs</I>).
+                 Full path to environment prefix.
    
           <B>-q</B>, <B>--quiet</B>
                  Do not display progress bar.
    
-          <B>--no-use-index-cache</B>
-                 Force fetching of channel index files.
-   
-          <B>--use-index-cache</B>
-                 Use cache of channel index files.
+          <B>-C</B>, <B>--use-index-cache</B>
+                 Use cache of channel index files, even if it has expired.
    
           <B>--use-local</B>
                  Use locally built packages.
@@ -114,8 +106,11 @@ conda remove
                  Offline mode, don't connect to the Internet.
    
           <B>-k</B>, <B>--insecure</B>
-                 Allow  conda  to  perform  "insecure" SSL connections and trans-
-                 fers.Equivalent to setting 'ssl_verify' to 'false'.
+                 Allow conda to perform "insecure" SSL connections and transfers.
+                 Equivalent to setting 'ssl_verify' to 'false'.
+   
+          <B>--features</B>
+                 Remove features (instead of packages).
    
    
    </PRE>
@@ -126,5 +121,5 @@ conda remove
    
    
    </PRE>
-   <H2>Anaconda, Inc.                      1i 2018                           CONDA(1)</H2><PRE>
+   <H2>Anaconda, Inc.                      3i 2018                           CONDA(1)</H2><PRE>
    </PRE>

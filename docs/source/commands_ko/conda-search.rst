@@ -20,67 +20,44 @@ conda search
    
    </PRE>
    <H2>DESCRIPTION</H2><PRE>
-          usage: conda search [-h] [-n ENVIRONMENT | <B>-p</B> PATH] [--canonical] [-f]
+          usage: conda search [-h] [-n ENVIRONMENT | <B>-p</B> PATH] [-i] [-C]
    
-          [--names-only] [--use-index-cache] [-o]
-                 [--platform  {win-32,win-64,osx-64,linux-32,linux-64}]  [--spec]
-                 [--reverse-dependency]   [--offline]   [-c   CHANNEL]   [--over-
-                 ride-channels] [--json] [--debug] [--verbose] [--use-local] [-k]
-                 [regex]
+          [--platform PLATFORM] [--reverse-dependency] [--offline]
+                 [-c  CHANNEL]  [--override-channels]  [--json] [--debug] [--ver-
+                 bose] [--use-local] [-k]
    
-          Search for packages and display  their  information.  The  input  is  a
-          Python  regular  expression.   To perform a search with a search string
-          that starts with a -, separate the search from  the  options  with  <B>--</B>,
-          like 'conda search <B>--</B> <B>-h</B>'.
+          Search for packages and display associated information.
    
-          A * in the results means that package is installed in the current envi-
-          ronment. A . means that package is not installed but is cached  in  the
-          pkgs directory.
+                 The input is a MatchSpec, a query language for  conda  packages.
+                 See examples below.
    
    
    </PRE>
    <H2>OPTIONS</H2><PRE>
-      <B>positional</B> <B>arguments:</B>
-          regex  Package specification or Python regular expression to search for
-                 (default: display all packages).
-   
       <B>optional</B> <B>arguments:</B>
           <B>-h</B>, <B>--help</B>
                  Show this help message and exit.
    
           <B>-n</B> ENVIRONMENT, <B>--name</B> ENVIRONMENT
-                 Name     of     environment      (in      root      prefix/envs:
-                 /Users/joelkim/.conda/envs).
+                 Name of environment.
    
           <B>-p</B> PATH, <B>--prefix</B> PATH
-                 Full   path   to   environment   prefix   (default:   <I>root</I>  <I>pre-</I>
-                 <I>fix/envs/conda-docs</I>).
+                 Full path to environment prefix.
    
-          <B>--canonical</B>
-                 Output canonical names of packages only.
+          <B>-i</B>, <B>--info</B>
+                 Provide  detailed  information  about  each package.  Similar to
+                 output of 'conda info package-name'.
    
-          <B>-f</B>, <B>--full-name</B>
-                 Only search for full name, ie. ^&lt;regex&gt;$.
+          <B>-C</B>, <B>--use-index-cache</B>
+                 Use cache of channel index files, even if it has expired.
    
-          <B>--names-only</B>
-                 Output only package names.
-   
-          <B>--use-index-cache</B>
-                 Use cache of channel index files.
-   
-          <B>-o</B>, <B>--outdated</B>
-                 Only display installed but outdated packages.
-   
-          <B>--platform</B> {win-32,win-64,osx-64,linux-32,linux-64}
+          <B>--platform</B> PLATFORM
                  Search the given platform. Should be  formatted  like  'osx-64',
                  'linux-32',  'win-64',  and  so on. The default is to search the
                  current platform.
    
-          <B>--spec</B> Treat the regex argument  as  a  package  specification  instead
-                 (package_name[=version[=build]]).
-   
           <B>--reverse-dependency</B>
-                 Perform  a  reverse dependency search. When using this flag, the
+                 Perform a reverse dependency search. When using this  flag,  the
                  <B>--full-name</B> flag is recommended. Use 'conda info package' to see
                  the dependencies of a package.
    
@@ -88,18 +65,18 @@ conda search
                  Offline mode, don't connect to the Internet.
    
           <B>-c</B> CHANNEL, <B>--channel</B> CHANNEL
-                 Additional  channel  to  search  for  packages.  These  are URLs
-                 searched in the order they  are  given  (including  file://  for
+                 Additional channel  to  search  for  packages.  These  are  URLs
+                 searched  in  the  order  they  are given (including file:// for
                  local directories). Then, the defaults or channels from .condarc
-                 are searched (unless <B>--override-channels</B> is given). You can  use
-                 'defaults'  to  get the default packages for conda, and 'system'
-                 to get the system  packages,  which  also  takes  .condarc  into
-                 account.  You  can  also  use  any  name  and the .condarc chan-
-                 nel_alias value will be prepended. The default channel_alias  is
+                 are  searched (unless <B>--override-channels</B> is given). You can use
+                 'defaults' to get the default packages for conda,  and  'system'
+                 to  get  the  system  packages,  which  also takes .condarc into
+                 account. You can also  use  any  name  and  the  .condarc  chan-
+                 nel_alias  value will be prepended. The default channel_alias is
                  http://conda.anaconda.org/.
    
           <B>--override-channels</B>
-                 Do  not search default or .condarc channels. Requires <B>--channel</B>.
+                 Do not search default or .condarc channels. Requires  <B>--channel</B>.
    
           <B>--json</B> Report all output as json. Suitable for using conda programmati-
                  cally.
@@ -114,29 +91,43 @@ conda search
                  Use locally built packages.
    
           <B>-k</B>, <B>--insecure</B>
-                 Allow  conda  to  perform  "insecure" SSL connections and trans-
-                 fers.Equivalent to setting 'ssl_verify' to 'false'.
+                 Allow conda to perform "insecure" SSL connections and transfers.
+                 Equivalent to setting 'ssl_verify' to 'false'.
    
    
    </PRE>
    <H2>EXAMPLES</H2><PRE>
-          Search for packages with 'scikit' in the name:
+          Search for a specific package named 'scikit-learn':
    
-                 conda search scikit
+                 conda search scikit-learn
    
-          Search for the 'python'  package  (but  no  other  packages  that  have
-          'python' in the name):
+          Search for packages containing 'scikit' in the package name:
    
-                 conda search -f python
+                 conda search *scikit*
+   
+          Note  that your shell may expand '*' before handing the command over to
+          conda.  Therefore it is sometimes necessary to  use  single  or  double
+          quotes around the query.
+   
+                 conda search '*scikit' conda search "*scikit*"
    
           Search  for  packages  for  64-bit Linux (by default, packages for your
           current platform are shown):
    
-                 conda search --platform linux-64
+                 conda search numpy[subdir=linux-64]
+   
+          Search for a specific version of a package:
+   
+                 conda search 'numpy&gt;=1.12'
+   
+          Search for a package on a specific channel
+   
+                 conda  search  conda-forge::numpy  conda   search   'numpy[chan-
+                 nel=conda-forge, subdir=osx-64]'
    
    
    
    
    </PRE>
-   <H2>Anaconda, Inc.                      1i 2018                           CONDA(1)</H2><PRE>
+   <H2>Anaconda, Inc.                      3i 2018                           CONDA(1)</H2><PRE>
    </PRE>

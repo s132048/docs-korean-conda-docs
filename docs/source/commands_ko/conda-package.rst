@@ -36,12 +36,10 @@ conda package
                  Show this help message and exit.
    
           <B>-n</B> ENVIRONMENT, <B>--name</B> ENVIRONMENT
-                 Name     of     environment      (in      root      prefix/envs:
-                 /Users/joelkim/.conda/envs).
+                 Name of environment.
    
           <B>-p</B> PATH, <B>--prefix</B> PATH
-                 Full   path   to   environment   prefix   (default:   <I>root</I>  <I>pre-</I>
-                 <I>fix/envs/conda-docs</I>).
+                 Full path to environment prefix.
    
           <B>-w</B> PATH [PATH ...], <B>--which</B> PATH [PATH ...]
                  Given some PATH print which conda package the file came from.
@@ -65,5 +63,5 @@ conda package
    
    
    </PRE>
-   <H2>Anaconda, Inc.                      1i 2018                           CONDA(1)</H2><PRE>
+   <H2>Anaconda, Inc.                      3i 2018                           CONDA(1)</H2><PRE>
    </PRE>
