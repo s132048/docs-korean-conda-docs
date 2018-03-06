@@ -9,28 +9,28 @@ conda uninstall
    <PRE>
    <!-- Manpage converted by man2html 3.0.1 -->
    <B>CONDA(1)</B>                         사용자 명령                        <B>CONDA(1)</B>
-   
-   
-   
-   
+
+
+
+
    </PRE>
    <H2>이름</H2><PRE>
           conda - conda uninstall
-   
-   
+
+
    </PRE>
    <H2>설명</H2><PRE>
           사용법: conda uninstall [-h] [-y] [--dry-run] [--json] [--debug] [--ver-
           bose]
-   
+
           [--all] [--features] [--force] [--no-pin] [-c CHANNEL]
                  [--override-channels]  [-n   ENVIRONMENT   |   <B>-p</B>   PATH]   [-q]
                  [--no-use-index-cache]     [--use-index-cache]     [--use-local]
                  [--offline] [-k] [package_name [package_name ...]]
-   
+
           conda remove 명령의 별칭. conda remove <B>--help</B> 를 본다.
-   
-   
+
+
    </PRE>
    <H2>옵션</H2><PRE>
       <B>위치</B> <B>인수:</B>
@@ -59,7 +59,7 @@ conda uninstall
 
           <B>--features</B>
                  패키지 대신 기능을 삭제한다.
-   
+
           <B>--force</B>
                  패키지를 강제 삭제하고 그 패키지에 의존하는 패키지는 삭제하지 않는다.
                  이 옵션으로 인해 환경이 손상되거나 일관성을 잃을 수 있다.
@@ -79,7 +79,7 @@ conda uninstall
 
           <B>--override-channels</B>
                  default 나 .condarc 에 설정된 채널을 검색하진 않는다. <B>--channel</B> 옵션을 요구한다.
-   
+
           <B>-n</B> ENVIRONMENT, <B>--name</B> ENVIRONMENT
                  환경의 이름이다.(envs 디렉토리에서)
 
@@ -104,15 +104,15 @@ conda uninstall
           <B>-k</B>, <B>--insecure</B>
                  콘다가 안전하지 않은 SSL 연결과 전송을 하도록 허용한다.
                  'ssl_verify'를 'false'로 설정하는 것과 동일하다.
-   
-   
+
+
    </PRE>
    <H2>예시</H2><PRE>
                  conda uninstall -n myenv scipy
-   
-   
-   
-   
+
+
+
+
    </PRE>
    <H2>Anaconda, Inc.                     12i 2017                           CONDA(1)</H2><PRE>
    </PRE>

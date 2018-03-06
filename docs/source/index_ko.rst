@@ -38,10 +38,10 @@
    :maxdepth: 1
 
    user-guide/index_ko
-   help-support
-   release-notes
+   help-support_ko
+   release-notes_ko
    commands_ko
    glossary_ko
-   license
+   license_ko
 
 .. |reg|    unicode:: U+000AE .. REGISTERED SIGN

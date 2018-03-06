@@ -9,20 +9,20 @@ conda update
    <PRE>
    <!-- Manpage converted by man2html 3.0.1 -->
    <B>CONDA(1)</B>                         사용자 명령                        <B>CONDA(1)</B>
-   
-   
-   
-   
+
+
+
+
    </PRE>
    <H2>이름</H2><PRE>
           conda - conda update
-   
-   
+
+
    </PRE>
    <H2>설명</H2><PRE>
           사용법:   conda   update   [-h]  [-y]  [--dry-run]  [-f]  [--file  FILE]
           [--no-deps] [-m]
-   
+
           [--use-index-cache] [--use-local] [--offline] [--no-pin]
                  [-c CHANNEL] [--override-channels] [-n ENVIRONMENT  |  <B>-p</B>  PATH]
                  [-q]  [--copy] [--clobber] [-k] [--alt-hint] [--update-dependen-
@@ -30,7 +30,7 @@ conda update
                  [--no-channel-priority]  [--show-channel-urls]  [--no-show-chan-
                  nel-urls] [--json] [--debug] [--verbose]  [--all]  [package_spec
                  [package_spec ...]]
-   
+
           콘다 패키지를 호환되는 가장 최신 버전으로 업데이트한다.
 
           이 명령은 패키지 이름의 목록을 받아 환경의 모든 패키지와
@@ -44,14 +44,14 @@ conda update
 
           의존 요소 확인를 모두 건너뛰고 싶다면 '--force' 옵션을 사용한다.
           이 옵션으로 환경과 호환되지 않는 패키지가 설치될 수 있기 때문에 주의해서 사용한다.
-   
-   
+
+
    </PRE>
    <H2>옵션</H2><PRE>
       <B>위치</B> <B>인수:</B>
           package_spec
                  콘다 환경에 설치할 패키지다.
-   
+
       <B>선택</B> <B>인수:</B>
           <B>-h</B>, <B>--help</B>
                  이 명령의 도움말을 보고 종료한다.
@@ -71,7 +71,7 @@ conda update
 
           <B>--no-deps</B>
                  의존 요소를 설치하지 않는다.
-   
+
           <B>-m</B>, <B>--mkdir</B>
                  환경 디렉토리가 필요하면 생성한다.
 
@@ -86,7 +86,7 @@ conda update
 
           <B>--no-pin</B>
                  고정된 파일을 무시한다.
-   
+
           <B>-c</B> CHANNEL, <B>--channel</B> CHANNEL
                  패키지를 검색할 추가 채널이다. 이 URL들은 주어진 순서대로 검색된다.
                  (로컬 디렉토리를 위한 file:// 형태의 URL 포함)
@@ -109,7 +109,7 @@ conda update
 
           <B>-q</B>, <B>--quiet</B>
                  프로그레스 바가 나타나지 않는다.
-   
+
           <B>--copy</B> 하드 링크와 소프트 링크를 사용하지 않고 패키지를 모두 복사해서 설치한다.
 
           <B>--clobber</B>
@@ -124,7 +124,7 @@ conda update
 
           <B>--update-dependencies</B>, <B>--update-deps</B>
                  의존 요소를 업데이트한다. (기본: True).
-   
+
           <B>--no-update-dependencies</B>, <B>--no-update-deps</B>
                  의존 요소를 업데이트하지 않는다. (기본: False).
 
@@ -141,7 +141,7 @@ conda update
 
           <B>--no-show-channel-urls</B>
                  채널 url을 보지 않는다.
-   
+
           <B>--json</B> 모든 출력을 json으로 보고한다. 콘다를 프로그래머식으로 사용할 때 적합하다.
 
           <B>--debug</B>
@@ -151,15 +151,15 @@ conda update
                  한번 사용하면 정보, 두번 사용하면 디버그, 세번 사용하면 기록을 본다.
 
           <B>--all</B>  환경에 설치된 모든 패키지를 업데이트한다.
-   
-   
+
+
    </PRE>
    <H2>예시</H2><PRE>
                  conda update -n myenv scipy
-   
-   
-   
-   
+
+
+
+
    </PRE>
    <H2>Anaconda, Inc.                     12i 2017                           CONDA(1)</H2><PRE>
    </PRE>

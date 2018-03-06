@@ -9,20 +9,20 @@ conda create
    <PRE>
    <!-- Manpage converted by man2html 3.0.1 -->
    <B>CONDA(1)</B>                         사용자 명령                        <B>CONDA(1)</B>
-   
-   
-   
-   
+
+
+
+
    </PRE>
    <H2>이름</H2><PRE>
           conda - conda create
 
-   
+
    </PRE>
    <H2>설명</H2><PRE>
           사용법:   conda   create   [-h]  [-y]  [--dry-run]  [-f]  [--file  FILE]
           [--no-deps] [-m]
-   
+
           [--use-index-cache] [--use-local] [--offline] [--no-pin]
                  [-c CHANNEL] [--override-channels] [-n ENVIRONMENT  |  <B>-p</B>  PATH]
                  [-q]  [--copy] [--clobber] [-k] [--alt-hint] [--update-dependen-
@@ -30,12 +30,12 @@ conda create
                  [--no-channel-priority]  [--show-channel-urls]  [--no-show-chan-
                  nel-urls]   [--json]   [--debug]   [--verbose]   [--clone   ENV]
                  [--no-default-packages] [package_spec [package_spec ...]]
-   
+
           지정된 패키지 목록으로부터 새로운 콘다 환경을 생성한다.
           생성된 환경을 사용하려면 'source activate envname' 명령을 사용한다.
           이 명령은 <B>-n</B> NAME 이나 <B>-p</B> PREFIX 옵션을 필요로 한다.
-   
-   
+
+
    </PRE>
    <H2>옵션</H2><PRE>
       <B>위치</B> <B>인수:</B>
@@ -54,11 +54,11 @@ conda create
 
           <B>-f</B>, <B>--force</B>
                  이미 설치된 패키지라도 강제 설치한다. <B>--no-deps</B> 를 내포한다.
-   
+
           <B>--file</B> FILE
                  주어진 파일의 패키지 버전을 읽는다. 파일 사양을 반복해서 보낼 수 있다.
                  (예시: <B>--file</B>=<I>file1</I> <B>--file</B>=<I>file2</I>).
-   
+
           <B>--no-deps</B>
                  의존 요소를 설치하지 않는다.
 
@@ -90,14 +90,14 @@ conda create
           <B>--override-channels</B>
                  default 나 .condarc 에 설정된 채널을 검색하진 않는다.
                  <B>--channel</B> 옵션을 요구한다.
-   
+
           <B>-n</B> ENVIRONMENT, <B>--name</B> ENVIRONMENT
                  환경의 이름이다.(envs 디렉토리에서)
-   
+
           <B>-p</B> PATH, <B>--prefix</B> PATH
                  콘다 환경 접두어로의 전체 경로다.
                  (기본:   <I>root</I>  <I>pre-</I> <I>fix/envs/conda-docs</I>).
-   
+
           <B>-q</B>, <B>--quiet</B>
                  프로그레스 바가 나타나지 않는다.
 
@@ -116,10 +116,10 @@ conda create
 
           <B>--update-dependencies</B>, <B>--update-deps</B>
                  의존 요소를 업데이트한다. (기본: True).
-   
+
           <B>--no-update-dependencies</B>, <B>--no-update-deps</B>
                  의존 요소를 업데이트하지 않는다. (기본: False).
-   
+
           <B>--channel-priority</B>, <B>--channel-pri</B>, <B>--chan-pri</B>
                  패키지 버전보다 채널 선호도를 우선한다. (기본: True)
                  주의: 이 기능은 베타이며 이후 배포에 변경될 수 있다.
@@ -141,21 +141,21 @@ conda create
 
           <B>--verbose</B>, <B>-v</B>
                  한번 사용하면 정보, 두번 사용하면 디버그, 세번 사용하면 기록을 본다.
-   
+
           <B>--clone</B> ENV
                  기존 로컬 디렉토리의 이름 또는 경로.
 
           <B>--no-default-packages</B>
                  .condarc 파일의 create_default_packages 설정을 무시한다.
 
-   
+
    </PRE>
    <H2>예시</H2><PRE>
                  conda create -n myenv sqlite
-   
-   
-   
-   
+
+
+
+
    </PRE>
    <H2>Anaconda, Inc.                     12i 2017                           CONDA(1)</H2><PRE>
    </PRE>

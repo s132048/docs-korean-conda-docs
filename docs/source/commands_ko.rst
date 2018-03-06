@@ -21,10 +21,22 @@
 다음 명령들이 콘다를 구성한다.
 
 .. toctree::
-   :glob:
    :maxdepth: 2
 
-   commands_ko/*
+   commands_ko/conda-clean_ko.rst
+   commands_ko/conda-config_ko.rst
+   commands_ko/conda-create_ko.rst
+   commands_ko/conda-help_ko.rst
+   commands_ko/conda-info_ko.rst
+   commands_ko/conda-install_ko.rst
+   commands_ko/conda-list_ko.rst
+   commands_ko/conda-package_ko.rst
+   commands_ko/conda-remove_ko.rst
+   commands_ko/conda-search_ko.rst
+   commands_ko/conda-uninstall_ko.rst
+   commands_ko/conda-update_ko.rst
+   commands_ko/conda-upgrade_ko.rst
+
 
 콘다 빌드 명령
 ====================
@@ -33,10 +45,25 @@
 콘다 빌드는 ``conda install conda-build``\ 로 설치할 수 있다.
 
 .. toctree::
-   :glob:
    :maxdepth: 2
 
-   commands/build/*
+   commands_ko/build/conda-build_ko.rst
+   commands_ko/build/conda-convert_ko.rst
+   commands_ko/build/conda-develop_ko.rst
+   commands_ko/build/conda-index_ko.rst
+   commands_ko/build/conda-inspect-channels_ko.rst
+   commands_ko/build/conda-inspect-linkages_ko.rst
+   commands_ko/build/conda-inspect-objects_ko.rst
+   commands_ko/build/conda-inspect_ko.rst
+   commands_ko/build/conda-metapackage_ko.rst
+   commands_ko/build/conda-render_ko.rst
+   commands_ko/build/conda-skeleton-cpan_ko.rst
+   commands_ko/build/conda-skeleton-cran_ko.rst
+   commands_ko/build/conda-skeleton-luarocks_ko.rst
+   commands_ko/build/conda-skeleton-pypi_ko.rst
+   commands_ko/build/conda-skeleton_ko.rst
+
+
 
 콘다 환경 명령
 ==========================
@@ -44,10 +71,16 @@
 다음 명령들이 콘다와 함께 자동 설치되는 콘다 환경(conda-env) 패키지를 구성한다.
 
 .. toctree::
-   :glob:
    :maxdepth: 2
 
-   commands_ko/env/*
+   commands_ko/env/conda-env-attach_ko.rst
+   commands_ko/env/conda-env-create_ko.rst
+   commands_ko/env/conda-env-export_ko.rst
+   commands_ko/env/conda-env-list_ko.rst
+   commands_ko/env/conda-env-remove_ko.rst
+   commands_ko/env/conda-env-update_ko.rst
+   commands_ko/env/conda-env-upload_ko.rst
+   commands_ko/env/conda-env_ko.rst
 
 Conda / pip / virtualenv 명령 비교
 =====================================

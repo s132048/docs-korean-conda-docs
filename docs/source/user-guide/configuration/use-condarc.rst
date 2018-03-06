@@ -434,11 +434,11 @@ its dependencies to the latest versions.
 
 If you prefer to update only the packages given explicitly at
 the command line and avoid updating existing installed packages
-as much as possible, set update_dependencies to ``True``:
+as much as possible, set update_dependencies to ``False``:
 
 .. code-block:: yaml
 
-   update_dependencies: True
+   update_dependencies: False
 
 NOTE: Conda still ensures that dependency specifications are
 satisfied. Thus, some dependencies may still be updated or,
@@ -521,6 +521,28 @@ The CONDA_ENVS_PATH environment variable overwrites this setting:
 * For Windows:
   ``set CONDA_ENVS_PATH=C:\Users\joe\envs;C:\Anaconda\envs``
 
+
+Specify package directories (pkgs_dirs)
+---------------------------------------
+
+Specify directories in which packages are located. If this
+key is set, the root prefix ``pkgs_dirs`` is not used unless
+explicitly included.
+
+EXAMPLE:
+
+.. code-block:: yaml
+
+  pkgs_dirs:
+    - /opt/anaconda/pkgs
+
+The CONDA_PKGS_DIRS environment variable overwrites this setting:
+
+* For macOS and Linux:
+  ``CONDA_PKGS_DIRS=/opt/anaconda/pkgs``
+
+* For Windows:
+  ``set CONDA_PKGS_DIRS=C:\Anaconda\pkgs``
 
 Conda build configuration
 =========================
